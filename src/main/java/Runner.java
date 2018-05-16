@@ -30,12 +30,9 @@ public class Runner {
         DBHelper.save(student1);
 
         Student student2 = new Student("Bob", 35, 4542265, course1);
-
-        student2.addLessonToStudent(lesson1);
         DBHelper.save(student2);
 
-        lesson1.addStudentToLesson(student2);
-        DBHelper.save(lesson1);
+        DBLesson.addStudentToLesson(lesson1, student2);
 
 
 

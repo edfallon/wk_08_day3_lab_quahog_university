@@ -31,4 +31,10 @@ public class DBLesson {
         }
         return results;
     }
+
+    public static void addStudentToLesson(Lesson lesson, Student student){
+        student.addLessonToStudent(lesson);
+        lesson.addStudentToLesson(student);
+        DBHelper.save(lesson);
+    }
 }

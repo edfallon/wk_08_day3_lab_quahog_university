@@ -55,7 +55,7 @@ public class Lesson {
     }
 
     @ManyToOne
-    @JoinColumn(name = "course", nullable = false)
+    @JoinColumn(name = "course_id", nullable = false)
     public Course getCourse() {
         return course;
     }
